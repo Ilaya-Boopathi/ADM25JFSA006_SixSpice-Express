@@ -1,0 +1,25 @@
+<div class="container mt-4 px-3 px-md-4">
+  <h4 class="fw-bold text-dark mb-4" *ngIf="filterRestaurants.length">
+    Restaurant Serving <span class="dish-name">"{{ restaurant }}"</span>
+  </h4>
+
+  <div *ngIf="filterRestaurants.length === 0">
+    No restaurants found for "{{ restaurant }}"
+  </div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
+      <div class="col d-flex justify-content-center p-3" *ngFor="let r of filterRestaurants">
+        <div class="restaurant-card" (click)="navigatetorestaurant(r.id)">
+          <img [src]="r.overview.image" [alt]="r.overview.restaurantName" class="restaurant-image" />
+          <div class="restaurant-info">
+            <h5 class="restaurant-name">{{ r.overview.restaurantName }}</h5>
+
+            <!-- <div class="rating-time">
+              <span>⭐ {{ r.rating }}</span>
+            </div> -->
+            <p class="cuisine">{{ r.overview.cuisine }}</p>
+            <p class="location">{{ r.overview.location   }}</p>
+            <!-- <p class="offer" *ngIf="r.restaurantoffer">{{ r.restaurantoffer }}</p> -->
+          </div>
+        </div>
+      </div>
+    </div>

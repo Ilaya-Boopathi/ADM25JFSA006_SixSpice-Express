@@ -1,0 +1,25 @@
+<nav class="navbar">
+  <div class="nav-left">
+    <div class="brand-logo-title">
+      <img src="./images/logo.png" alt="SixSpice Logo" class="logo" />
+      <a class="app-name"    routerLink="/home-page" >SixSpice Express</a>
+    </div>
+  </div>
+ 
+  <div class="nav-right" [ngClass]="{'active': isMenuOpen}">
+    <button class="nav-button" (click)="goToHome()">
+      <i class="fa-solid fa-circle-arrow-left"></i> Back
+    </button>
+    <button class="nav-button" (click)="goToLogin()">
+      <i class="fa fa-user"></i>Login
+    </button>
+   
+  </div>
+
+   <button class="nav-toggle-button" (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
+</nav>
+ 
+ 
+ 

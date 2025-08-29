@@ -1,0 +1,64 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Manage Orders</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="title">
+      <tr>
+        <th>Order ID</th>
+        <th>Customer</th>
+        <th>Item</th>
+        <th>Amount</th>
+        <th>Status</th>
+        <th>Assign Agent</th>
+        <th>Assigned Agent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.orderId }}</td>
+        <td>{{ order.customerName }}</td>
+        <td>{{ order.item }}</td>
+        <td>₹{{ order.total }}</td>
+        <td>
+          <ng-container *ngIf="order.status !== 'Delivered'; else deliveredText">
+            <select class="form-select" [(ngModel)]="order.status" (change)="updateStatus(order, order.status)">
+              <option>Pending</option>
+              <option>Order Placed</option>
+              <option>Preparing</option>
+              <option>Out for Delivery</option>
+              <option>Delivered</option>
+            </select>
+          </ng-container>
+          <ng-template #deliveredText>
+            <span>Delivered</span>
+          </ng-template>
+        </td>
+
+        <td>
+          <select class="form-select"
+            [(ngModel)]="order.assignedAgent"
+            [disabled]="order.status === 'Delivered'"
+            (change)="assignAgent(order, $event)">
+            
+            <option value="">Select Agent</option>
+
+            <!-- Show removed agent if applicable -->
+            <option *ngIf="isAssignedAgentRemoved(order)" [value]="order.assignedAgent" disabled>
+              {{ order.assignedAgent }} (Removed)
+            </option>
+
+            <!-- Show available agents -->
+            <option *ngFor="let agent of getAgentsForOrder(order)" [value]="agent.name">
+              {{ agent.name }}
+            </option>
+          </select>
+        </td>
+
+
+        <td>
+          {{ order.status === 'Delivered' && order.assignedAgent ? 'Delivered by ' + order.assignedAgent : order.assignedAgent || 'Not Assigned' }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

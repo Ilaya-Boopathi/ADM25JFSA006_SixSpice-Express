@@ -1,0 +1,81 @@
+<app-navbar-login></app-navbar-login>
+
+<div class="signup-container">
+  <div class="signup-card">
+    <div class="tabs">
+      <button (click)="activeTab = 'user'" [class.active]="activeTab === 'user'">User Login</button>
+      <button (click)="activeTab = 'restaurant'" [class.active]="activeTab === 'restaurant'">Restaurant Login</button>
+    </div>
+
+    <div *ngIf="loginMessage" class="login-message">
+      {{ loginMessage }}
+    </div>
+
+
+    <!-- User Login Form -->
+    <form *ngIf="activeTab === 'user'" [formGroup]="userLoginForm" (ngSubmit)="onUserLogin()">
+      <h2>User Login</h2>
+
+      <input type="email" formControlName="email" placeholder="Email Address" />
+      <div *ngIf="userLoginForm.get('email')?.touched && userLoginForm.get('email')?.errors?.['required']" class="error">
+        Enter the email
+      </div>
+      <div *ngIf="userLoginForm.get('email')?.touched && userLoginForm.get('email')?.errors?.['email']" class="error">
+        Enter a valid email
+      </div>
+
+      <input type="password" formControlName="password" placeholder="Password" />
+      <div *ngIf="userLoginForm.get('password')?.touched && userLoginForm.get('password')?.errors?.['required']" class="error">
+        Enter the password
+      </div>
+      <div *ngIf="userLoginForm.get('password')?.touched && userLoginForm.get('password')?.errors?.['minlength']" class="error">
+        Password must be at least 6 characters.
+      </div>
+
+      <div *ngIf="userLoginForm.get('password')?.errors?.['invalid']" class="error">
+        Invalid email or password.
+      </div>
+
+
+      <p class="forgot-link">
+        <a routerLink="/forgot-password">Forgot Password?</a>
+      </p>
+
+      <button type="submit" [disabled]="userLoginForm.invalid">Login</button>
+      <p>Don't have an account? <a [routerLink]="['/signup-page']" [queryParams]="{ tab: 'user' }">Sign Up</a></p>
+    </form>
+
+    <!-- Restaurant Login Form -->
+    <form *ngIf="activeTab === 'restaurant'" [formGroup]="restaurantLoginForm" (ngSubmit)="onRestaurantLogin()">
+      <h2>Restaurant Login</h2>
+
+      <input type="email" formControlName="email" placeholder="Email Address" />
+      <div *ngIf="restaurantLoginForm.get('email')?.touched && restaurantLoginForm.get('email')?.errors?.['required']" class="error">
+        Enter the email
+      </div>
+      <div *ngIf="restaurantLoginForm.get('email')?.touched && restaurantLoginForm.get('email')?.errors?.['email']" class="error">
+        Enter a valid email
+      </div>
+
+      <input type="password" formControlName="password" placeholder="Password" />
+      <div *ngIf="restaurantLoginForm.get('password')?.touched && restaurantLoginForm.get('password')?.errors?.['required']" class="error">
+        Enter the password
+      </div>
+      <div *ngIf="restaurantLoginForm.get('password')?.touched && restaurantLoginForm.get('password')?.errors?.['minlength']" class="error">
+        Password must be at least 6 characters.
+      </div>
+
+      <div *ngIf="restaurantLoginForm.get('password')?.errors?.['invalid']" class="error">
+        Invalid email or password.
+      </div>
+
+
+      <p class="forgot-link">
+        <a routerLink="/forgot-password">Forgot Password?</a>
+      </p>
+      <button type="submit" [disabled]="restaurantLoginForm.invalid">Login</button>
+      <p>Don't have an account? <a [routerLink]="['/signup-page']" [queryParams]="{ tab: 'restaurant' }">Sign Up</a></p>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

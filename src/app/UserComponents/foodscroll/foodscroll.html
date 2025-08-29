@@ -1,0 +1,19 @@
+<div class="container my-5">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="fw-bold text-dark">Eat what makes you happy</h4>
+    <div class="d-flex gap-2">
+      <div class="nav-arrow" (click)="scrollLeft()">&#8592;</div>
+      <div class="nav-arrow" (click)="scrollRight()">&#8594;</div>
+    </div>
+  </div>
+
+  <div class="scroll-container d-flex" #scrollBox>
+    <div class="custom-card text-center p-3 me-5" *ngFor="let item of foodItems"
+    (click)="navigatetorestaurant(item.name)">
+      <img [src]="item.image" [alt]="item.name" class="food-icon mb-2">
+      <h5 class="card-title">{{ item.name.split(' ').slice(0, 2).join(' ') }}</h5>
+      <h5 class="card-title">{{ item.name.split(' ').slice(2).join(' ') }}</h5>
+    </div>
+  </div>
+  <hr>
+</div>

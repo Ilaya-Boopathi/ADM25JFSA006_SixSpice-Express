@@ -1,0 +1,25 @@
+<nav class="navbar">
+  <div class="nav-left">
+    <div class="brand-logo-title">
+      <img src="images/logo.png" alt="SixSpice Logo" class="logo" />
+      <span class="brand-title">SixSpice Express</span>
+    </div>
+  </div>
+
+  <div class="nav-right"  [ngClass]="{'active': isMenuOpen}">
+    <button class="nav-button" (click)="goBack()">
+      <i class="fas fa-home"></i> Home
+    </button>
+    <button class="nav-button" (click)="changeAddress()">
+      <i class="fas fa-map-marker-alt"></i> Change Address
+    </button>
+    <button class="nav-button" (click)="goToProfile()">
+      <i class="fas fa-user"></i> Profile
+    </button>
+  </div>
+  <button class="nav-toggle-button" (click)="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
+</nav>
+
+<div style="height:110px"></div>

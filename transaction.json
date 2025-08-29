@@ -1,0 +1,40 @@
+{
+  "transaction": [
+    {
+      "id": "7cdc",
+      "transactionId": "TXN-1754883034669",
+      "method": "COD",
+      "cardType": "Unknown",
+      "coupon": "WELCOME25",
+      "amount": 175
+    },
+    {
+      "id": "b5c8",
+      "transactionId": "TXN-1754887083453",
+      "method": "COD",
+      "cardType": "Unknown",
+      "coupon": "",
+      "amount": 200
+    },
+    {
+      "id": "03cb",
+      "transactionId": "TXN-1754912172864",
+      "method": "COD",
+      "cardType": "Unknown",
+      "coupon": "SPICY100",
+      "amount": {
+        "source": {}
+      }
+    },
+    {
+      "id": "2a73",
+      "transactionId": "TXN-1754912367134",
+      "method": "COD",
+      "cardType": "Unknown",
+      "coupon": "SPICY100",
+      "amount": {
+        "source": {}
+      }
+    }
+  ]
+}

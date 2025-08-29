@@ -1,0 +1,43 @@
+<div class="nav">
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container-fluid">
+
+      <!-- Back Button -->
+      <button *ngIf="showBackButton" class="btn btn-outline-light me-2" (click)="goBack()"><i class="fa-solid fa-arrow-left"></i></button>
+
+      <img src="images/logo.png" alt="Logo" width="36" height="36" class="d-inline-block align-text-top me-2 logo">
+      <a class="navbar-brand fw-bold" routerLink="menu">SixSpice Express</a>
+
+      <button #navbarToggler class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <form class="d-flex mx-auto" style="max-width: 400px;">
+          <input class="form-control me-2" type="search" placeholder="Search food or restaurant" aria-label="Search"
+            [(ngModel)]="searchText" name="searchText">
+            <button (click)="search()" class="btn btn-outline-light" type="button">Search</button>
+          </form>
+
+       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-end flex-lg-row">
+          <li class="nav-item me-2">
+            <a class="btn nav-btn-custom d-flex align-items-center" routerLink="menu" routerLinkActive="nav-btn-active" [routerLinkActiveOptions]="{ exact: true }"><i class="fa-solid fa-house me-2"></i> Home</a>
+
+          </li>
+          <li class="nav-item me-2">
+            <a class="btn nav-btn-custom d-flex align-items-center" routerLink="cart" routerLinkActive="nav-btn-active" [routerLinkActiveOptions]="{ exact: true }"><i class="fa-solid fa-cart-shopping me-2"></i> Cart</a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="btn nav-btn-custom d-flex align-items-center" routerLink="user-orders-component" routerLinkActive="nav-btn-active" [routerLinkActiveOptions]="{ exact: true }"><i class="fa-solid fa-receipt me-2"></i> Orders</a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="btn nav-btn-custom d-flex align-items-center" routerLink="profile" routerLinkActive="nav-btn-active" [routerLinkActiveOptions]="{ exact: true }"><i class="fa-solid fa-user me-2"></i> Profile</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn nav-btn-custom d-flex align-items-center" (click)="logOut()"><i class="fa-solid fa-right-from-bracket me-2"></i> Sign Out</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,73 @@
+<div class="container mt-4">
+  <!-- Restaurants Section -->
+  <div class="restaurant-title mb-4" *ngIf="matchedRestaurants.length">
+    <h4 class="fw-bold text-dark">
+      Restaurants serving <span class="text">"{{ text }}"</span>
+    </h4>
+  </div>
+
+  <!-- No Results Found Image -->
+  <div class="d-flex flex-column align-items-center justify-content-center mt-5" 
+       *ngIf="query && matchedRestaurants.length === 0 && matchedFoods.length === 0"
+       style="min-height: 60vh;">
+    <!-- <img src="images/no result.png" alt="No results found"
+         style="width: 400px; height: 400px; object-fit: contain; opacity: 0.95;" /> -->
+    <p class="mt-4 text-muted fw-bold fs-5 text-center">
+      No results found. We can't find any item matching your search.
+    </p>
+  </div>
+
+  <div class="container my-5" *ngIf="matchedRestaurants.length">
+    <div class="row row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
+      <div class="col d-flex justify-content-center p-3" *ngFor="let r of matchedRestaurants">
+        <div class="restaurant-card" (click)="navigatetorestaurant(r.id)" style="cursor: pointer;">
+          <img [src]="r.overview.image || 'images/logo.png'" [alt]="r.overview.restaurantName" class="restaurant-image" />
+          <div class="restaurant-info">
+            <h5 class="restaurant-name">{{ r.overview.restaurantName }}</h5>
+            <p class="cuisine">{{ r.overview.cuisine }}</p>
+            <p class="location">{{ r.overview.location }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Foods Section -->
+  <div class="container mt-4">
+    <!-- Food Title -->
+    <div class="restaurant-title mb-4" *ngIf="matchedFoods.length">
+      <h4 class="fw-bold text-dark">Foods matching with <span class="text">"{{ text }}"</span></h4>
+    </div>
+
+    <!-- Food Cards -->
+    <div class="row" *ngIf="matchedFoods.length">
+      <div class="col-6 col-md-4 col-lg-3 mb-4 p-2" *ngFor="let item of matchedFoods">
+        <div class="card h-100">
+          <img *ngIf="item.food.image" [src]="item.food.image" class="card-img-top" [alt]="item.food.name" />
+
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h5 class="card-title mb-1">{{ item.food.name }}</h5>
+                <p class="card-text mb-1 text-muted">{{ item.food.category }}</p>
+                <p class="card-text mb-1 text-muted">From: {{ item.restaurantName }}</p>
+              </div>
+              <div class="text-end">
+                <p class="mb-1 fw-bold text-success">₹{{ item.food.price }}</p>
+                <p class="mb-0 text-warning">⭐ 4.5</p>
+              </div>
+            </div>
+
+            <div class="text-center mt-3">
+              <button *ngIf="!isItemAdded(item)" class="btn btn-warning rounded-pill px-4"
+                (click)="addToCart(item.food, item.restaurantName, item.restaurantId)">
+                Add
+              </button>
+              <span *ngIf="isItemAdded(item)" class="text-success fw-bold">Added to Cart</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

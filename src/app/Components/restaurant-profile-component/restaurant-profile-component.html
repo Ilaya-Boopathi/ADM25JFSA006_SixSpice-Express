@@ -1,0 +1,87 @@
+<div class="container py-5 justify-content-center">
+  <div class="text-center mb-5 profile-header">
+    <h1 class="display-6 fw-bold text-white mb-1">{{ restaurant?.restaurantName }}</h1>
+    <p class="fs-6 text-white-50 mb-0">{{ restaurant?.cuisine }}</p>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-12 details">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="detail-card">
+            <ul class="list-unstyled mb-0">
+              <li class="mb-4">
+                <h5 class="fw-bold text-dark d-flex align-items-center">
+                  <i class="fa-solid fa-location-dot me-3 text-primary fs-5"></i> Address
+                </h5>
+                <p class="text-secondary ps-4">{{ restaurant?.address }}</p>
+              </li>
+              <li>
+                <h5 class="fw-bold text-dark d-flex align-items-center">
+                  <i class="fa-solid fa-clock me-3 text-primary fs-5"></i> Operating Hours
+                </h5>
+                <p class="text-secondary ps-4">{{ restaurant?.hours }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="detail-card">
+            <ul class="list-unstyled mb-0">
+              <li class="mb-4">
+                <h5 class="fw-bold text-dark d-flex align-items-center">
+                  <i class="fa-solid fa-envelope me-3 text-primary fs-5"></i> Email
+                </h5>
+                <p class="text-secondary ps-4">{{ restaurant?.email }}</p>
+              </li>
+              <li>
+                <h5 class="fw-bold text-dark d-flex align-items-center">
+                  <i class="fa-solid fa-user me-3 text-primary fs-5"></i> Owner
+                </h5>
+                <p class="text-secondary ps-4">{{ restaurant?.owner }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="detail-card">
+            <ul class="list-unstyled mb-0">
+              <li class="mb-4">
+                <h5 class="fw-bold text-dark d-flex align-items-center">
+                  <i class="fa-solid fa-phone me-3 text-primary fs-5"></i> Contact
+                </h5>
+                <p class="text-secondary ps-4">{{ restaurant?.contact }}</p>
+              </li>
+              <li>
+                <h5 class="fw-bold text-dark d-flex align-items-center">
+                  <i class="fa-solid fa-money-check-dollar me-3 text-primary fs-5"></i> GST
+                </h5>
+                <p class="text-secondary ps-4">{{ restaurant?.gst }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <button class="btn btn-outline-primary me-3" (click)="toggleEditMode()">
+      <i class="fa-solid fa-pen-to-square me-2"></i>Edit Profile
+    </button>
+    <button class="btn btn-outline-danger" (click)="logout()">
+      <i class="fa-solid fa-right-from-bracket me-2"></i>Logout
+    </button>
+  </div>
+
+</div>
+
+<div *ngIf="showEditForm" class="overlay">
+  <div class="modal-content">
+    <app-profile-edit-component
+       [restaurant]="restaurant"
+       (formSubmit)="onFormSubmit($event)"
+       (formCancel)="toggleEditMode()">
+     </app-profile-edit-component>
+  </div>
+</div>

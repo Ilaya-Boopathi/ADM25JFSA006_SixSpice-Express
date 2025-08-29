@@ -1,0 +1,46 @@
+<div class="card mt-4">
+  <div class="card-header">
+    <h4>{{ isEditMode ? 'Edit Item' : 'Add New Item' }}</h4>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+
+      <!-- Item Name -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Item Name</label>
+        <input type="text" id="name" class="form-control" formControlName="name">
+        <div *ngIf="itemForm.get('name')?.invalid && itemForm.get('name')?.touched" class="text-danger">
+          <small *ngIf="itemForm.get('name')?.errors?.['required']">Item name is required.</small>
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" id="price" class="form-control" formControlName="price">
+        <div *ngIf="itemForm.get('price')?.invalid && itemForm.get('price')?.touched" class="text-danger">
+          <small *ngIf="itemForm.get('price')?.errors?.['required']">Price is required.</small>
+          <small *ngIf="itemForm.get('price')?.errors?.['min']">Price must be at least 1.</small>
+        </div>
+      </div>
+
+      <!-- Category -->
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select id="category" class="form-select" formControlName="category">
+          <option value="" disabled>Select Category</option>
+          <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+        </select>
+        <div *ngIf="itemForm.get('category')?.invalid && itemForm.get('category')?.touched" class="text-danger">
+          <small>Category is required.</small>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <button type="submit" class="btn btn-success me-2" [disabled]="itemForm.invalid">
+        {{ isEditMode ? 'Update' : 'Add' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+    </form>
+  </div>
+</div>

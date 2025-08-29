@@ -1,0 +1,80 @@
+<div class="modal-content">
+  <div class="d-flex justify-content-between align-items-center mb-3 mt-4 title">
+    <h2>Edit Profile</h2>
+    <button type="button" class="btn-close" (click)="onCancel()"></button>
+  </div>
+
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="container-fluid card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="restaurantName" class="form-label">Restaurant Name</label>
+            <input type="text" id="restaurantName" formControlName="restaurantName" class="form-control" [ngClass]="{'is-invalid': editForm.get('restaurantName')?.invalid && editForm.get('restaurantName')?.touched}">
+            <div *ngIf="editForm.get('restaurantName')?.invalid && editForm.get('restaurantName')?.touched" class="invalid-feedback">
+              Restaurant name is required.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="cuisine" class="form-label">Cuisine</label>
+            <input type="text" id="cuisine" formControlName="cuisine" class="form-control" [ngClass]="{'is-invalid': editForm.get('cuisine')?.invalid && editForm.get('cuisine')?.touched}">
+            <div *ngIf="editForm.get('cuisine')?.invalid && editForm.get('cuisine')?.touched" class="invalid-feedback">
+              Cuisine is required.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <textarea id="address" formControlName="address" class="form-control" [ngClass]="{'is-invalid': editForm.get('address')?.invalid && editForm.get('address')?.touched}"></textarea>
+            <div *ngIf="editForm.get('address')?.invalid && editForm.get('address')?.touched" class="invalid-feedback">
+              Address is required.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="hours" class="form-label">Operating Hours</label>
+            <input type="text" id="hours" formControlName="hours" class="form-control" [ngClass]="{'is-invalid': editForm.get('hours')?.invalid && editForm.get('hours')?.touched}">
+            <div *ngIf="editForm.get('hours')?.invalid && editForm.get('hours')?.touched" class="invalid-feedback">
+              Operating hours are required.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" formControlName="email" class="form-control" [ngClass]="{'is-invalid': editForm.get('email')?.invalid && editForm.get('email')?.touched}">
+            <div *ngIf="editForm.get('email')?.invalid && editForm.get('email')?.touched" class="invalid-feedback">
+              <span *ngIf="editForm.get('email')?.errors?.['required']">Email is required.</span>
+              <span *ngIf="editForm.get('email')?.errors?.['email']">Please enter a valid email address.</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="owner" class="form-label">Owner</label>
+            <input type="text" id="owner" formControlName="owner" class="form-control" [ngClass]="{'is-invalid': editForm.get('owner')?.invalid && editForm.get('owner')?.touched}">
+            <div *ngIf="editForm.get('owner')?.invalid && editForm.get('owner')?.touched" class="invalid-feedback">
+              Owner name is required.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="contact" class="form-label">Contact</label>
+            <input type="text" id="contact" formControlName="contact" class="form-control" [ngClass]="{'is-invalid': editForm.get('contact')?.invalid && editForm.get('contact')?.touched}">
+            <div *ngIf="editForm.get('contact')?.invalid && editForm.get('contact')?.touched" class="invalid-feedback">
+              <span *ngIf="editForm.get('contact')?.errors?.['required']">Contact number is required.</span>
+              <span *ngIf="editForm.get('contact')?.errors?.['pattern']">Please enter a valid 10-digit phone number.</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="gst" class="form-label">GST</label>
+            <input type="text" id="gst" formControlName="gst" class="form-control" [ngClass]="{'is-invalid': editForm.get('gst')?.invalid && editForm.get('gst')?.touched}">
+            <div *ngIf="editForm.get('gst')?.invalid && editForm.get('gst')?.touched" class="invalid-feedback">
+              <span *ngIf="editForm.get('gst')?.errors?.['required']">GST number is required.</span>
+              <span *ngIf="editForm.get('gst')?.errors?.['pattern']">Please enter a valid GST number.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-end p-3">
+      <button type="button" class="btn btn-secondary me-2" (click)="onCancel()">Cancel</button>
+      <button type="submit" class="btn btn-primary" [disabled]="editForm.invalid">Save Changes</button>
+    </div>
+  </form>
+</div>

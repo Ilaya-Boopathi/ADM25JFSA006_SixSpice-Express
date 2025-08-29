@@ -1,0 +1,52 @@
+<app-nav-checkout></app-nav-checkout>
+<h1>Checkout Summary</h1>
+
+<div class="checkout-wrapper">
+  <!-- Delivery Address -->
+  <div class="left-panel">
+    <h3>Delivery Address</h3>
+    <input [(ngModel)]="address.name" placeholder="Name" required />
+    <input [(ngModel)]="address.line1" placeholder="Address Line 1" required />
+    <input [(ngModel)]="address.line2" placeholder="Address Line 2" required />
+    <input [(ngModel)]="address.city" placeholder="City" required />
+    <input [(ngModel)]="address.pincode" placeholder="Pincode" maxlength="6" required />
+
+  </div>
+
+  <!-- Cart Summary -->
+  <div class="right-panel">
+    <h3>Cart Summary</h3>
+
+    <ng-container *ngIf="cards.length > 0">
+      <div class="cart-items" *ngIf="cards.length > 0">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Item Name</th>
+              <th>Quantity</th>
+              <th>Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cards">
+              <td>{{ item.name }}</td>
+              <td>{{ item.quantity }}</td>
+              <td>{{ item.price | currency: "INR"}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="total-row">
+          <strong>Total:</strong>
+          <strong>{{ totalAmount | currency: "INR"}}</strong>
+        </div>
+
+        <button class="payment-btn" (click)="proceedToPayment()">Choose Payment</button>
+      </div>
+
+      <div *ngIf="cards.length === 0" class="empty-cart">Cart is empty</div>
+    </ng-container>
+  </div>
+</div>
+
+<app-footer></app-footer>

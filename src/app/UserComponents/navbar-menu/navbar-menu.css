@@ -1,0 +1,146 @@
+/* Navbar Container */
+.nav {
+  margin-bottom: 100px;
+}
+
+
+
+/* Fixed Navbar Style */
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #670E10, #A91B0D, #FF5722);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  font-family: var(--app-font-ui);
+  height: 75px;
+}
+
+/* Logo Styling */
+.logo {
+  height: 64px;
+  width: 64px;
+  margin-right: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.15);
+}
+
+/* Brand Title */
+.navbar-brand {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+
+/* Search Bar */
+form.d-flex input {
+  border-radius: 8px;
+  padding: 6px 12px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+form.d-flex button {
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 6px 12px;
+  color: #444;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.nav-btn-custom {
+  border-color: #ff5722;
+  background-color: #fff7f4;
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.2);
+  transform: translateY(-1px);
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-btn-custom:hover {
+  color: #e64a19;
+  border-color: #ff5722;
+  background-color: #fff7f4;
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.2);
+  transform: translateY(-1px);
+  transition: all 0.2s ease-in-out;
+  background-color: #ffe1d9;
+  box-shadow: 0 6px 12px rgba(255, 87, 34, 0.3);
+  transform: translateY(-2px);
+}
+
+
+
+.nav-btn-active {
+  color: #ffffff !important;
+  background-color: #ff5722 !important;
+  border-color: #e64a19 !important;
+  box-shadow: 0 6px 12px rgba(230, 74, 25, 0.3);
+  transform: translateY(-2px);
+}
+
+
+
+
+form.d-flex button:hover {
+  color: #e64a19;
+  border-color: #ff5722;
+  background-color: #fff7f4;
+  box-shadow: 0 4px 10px rgba(255,87,34,0.2);
+  transform: translateY(-1px);
+}
+
+/* Buttons */
+.btn { font-family: var(--app-font-ui); font-weight: 600; }
+
+/* Active Link Style + Animation */
+@keyframes activePulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 87, 34, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0); }
+}
+
+.active-link {
+  color: #212529 !important;
+  background-color: #fff7f4 !important;
+  border-radius: 8px;
+  animation: activePulse 1.8s ease-out infinite;
+}
+
+/* Hover Effect */
+.nav-link:hover { color: #ffccbc !important; }
+
+/* Back Button */
+.btn-outline-light {
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff7f4;
+  color: #e64a19;
+  border-color: #ff5722;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-brand { font-size: 18px; }
+  .logo { height: 48px; width: 48px; }
+  .nav { margin-bottom: 80px; }
+}

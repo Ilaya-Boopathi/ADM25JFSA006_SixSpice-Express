@@ -1,0 +1,168 @@
+<app-navbar-signup></app-navbar-signup>
+
+<div class="signup-container">
+  <div class="signup-card">
+    <div class="tabs">
+      <button (click)="activeTab = 'user'" [class.active]="activeTab === 'user'">User Signup</button>
+      <button (click)="activeTab = 'restaurant'" [class.active]="activeTab === 'restaurant'">Restaurant Signup</button>
+    </div>
+
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+
+
+    <!-- User Signup Form -->
+    <form *ngIf="activeTab === 'user'" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <h2>Create Account</h2>
+
+      <input type="text" formControlName="name" placeholder="Full Name" />
+      <div *ngIf="signupForm.get('name')?.touched && signupForm.get('name')?.invalid" class="error">
+        Name must be at least 3 characters.
+      </div>
+
+      <input type="tel" formControlName="phoneNumber" placeholder="Phone Number" />
+      <div *ngIf="signupForm.get('phoneNumber')?.touched && signupForm.get('phoneNumber')?.errors?.['required']" class="error">
+        Phone number is required.
+      </div>
+      <div *ngIf="signupForm.get('phoneNumber')?.touched && signupForm.get('phoneNumber')?.errors?.['pattern']" class="error">
+        Please enter a valid 10-digit phone number.
+      </div>
+
+      <input type="email" formControlName="email" placeholder="Email Address" />
+      <div *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.errors?.['required']" class="error">
+        Enter the email
+      </div>
+      <div *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.errors?.['mustContainAt']" class="error">
+        Email must contain '@'
+      </div>
+      <div *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.errors?.['mustEndWithCom']" class="error">
+        Email must end with '.com'
+      </div>
+
+      <input type="password" formControlName="password" placeholder="Password" />
+      <div *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.invalid" class="error">
+        Password must be at least 6 characters.
+      </div>
+
+      <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" />
+      <div *ngIf="signupForm.errors?.['passwordsMismatch'] && signupForm.get('confirmPassword')?.touched" class="error">
+        Passwords do not match.
+      </div>
+
+      <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+
+      <p>Already have an account? <a routerLink="/login-page">Login</a></p>
+    </form>
+
+    <!-- Restaurant Signup Form -->
+<!-- Restaurant Signup Form -->
+<form *ngIf="activeTab === 'restaurant'" [formGroup]="restaurantForm" (ngSubmit)="onRestaurantSignup()">
+  <h2>Restaurant Registration</h2>
+
+  <div class="form-grid">
+    <div>
+      <input type="text" formControlName="restaurantName" placeholder="Restaurant Name" />
+      <div *ngIf="restaurantForm.get('restaurantName')?.touched && restaurantForm.get('restaurantName')?.invalid" class="error">
+        Restaurant name is required.
+      </div>
+    </div>
+
+    <div>
+      <input type="text" formControlName="address" placeholder="Address" />
+      <div *ngIf="restaurantForm.get('address')?.touched && restaurantForm.get('address')?.invalid" class="error">
+        address is required.
+      </div>
+    </div>
+
+    <div>
+      <input type="tel" formControlName="phoneNumber" placeholder="Phone Number" />
+      <div *ngIf="restaurantForm.get('phoneNumber')?.touched && restaurantForm.get('phoneNumber')?.errors?.['required']" class="error">
+        Phone number is required.
+      </div>
+      <div *ngIf="restaurantForm.get('phoneNumber')?.touched && restaurantForm.get('phoneNumber')?.errors?.['pattern']" class="error">
+        Please enter a valid 10-digit phone number.
+      </div>
+    </div>
+
+    <div>
+      <input type="email" formControlName="email" placeholder="Email" />
+      <div *ngIf="restaurantForm.get('email')?.touched && restaurantForm.get('email')?.errors?.['required']" class="error">
+        Enter the email
+      </div>
+      
+      <div *ngIf="restaurantForm.get('email')?.touched && restaurantForm.get('email')?.errors?.['mustContainAt']" class="error">
+        Email must contain '@'
+      </div>
+
+      <div *ngIf="restaurantForm.get('email')?.touched && restaurantForm.get('email')?.errors?.['mustEndWithCom']" class="error">
+        Email must end with '.com'
+      </div>
+    </div>
+
+    <div>
+      <input type="password" formControlName="password" placeholder="Password" />
+      <div *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.invalid" class="error">
+        Password must be at least 6 characters.
+      </div>
+    </div>
+
+    <div>
+      <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" />
+      <div *ngIf="restaurantForm.errors?.['passwordsMismatch'] && restaurantForm.get('confirmPassword')?.touched" class="error">
+        Passwords do not match.
+      </div>
+      <div *ngIf="restaurantForm.errors?.['passwordTooShort'] && restaurantForm.get('password')?.touched" class="error">
+        Password must be at least 6 characters.
+      </div>
+      <div *ngIf="restaurantForm.errors?.['confirmPasswordTooShort'] && restaurantForm.get('confirmPassword')?.touched" class="error">
+        Confirm Password must be at least 6 characters.
+      </div>
+    </div>
+
+    <div>
+      <input type="text" formControlName="location" placeholder="Location" />
+      <div *ngIf="restaurantForm.get('location')?.touched && restaurantForm.get('location')?.invalid" class="error">
+        Location is required.
+      </div>
+    </div>
+
+    <!-- Newly Added Fields -->
+    <div>
+      <input type="text" formControlName="cuisine" placeholder="Cuisine Type" />
+      <div *ngIf="restaurantForm.get('cuisine')?.touched && restaurantForm.get('cuisine')?.invalid" class="error">
+        Cuisine type is required.
+      </div>
+    </div>
+
+    <div>
+      <input type="text" formControlName="owner" placeholder="Owner Name" />
+      <div *ngIf="restaurantForm.get('owner')?.touched && restaurantForm.get('owner')?.invalid" class="error">
+        Owner name is required.
+      </div>
+    </div>
+
+    <div>
+      <input type="text" formControlName="gst" placeholder="GST Number" />
+      <div *ngIf="restaurantForm.get('gst')?.touched && restaurantForm.get('gst')?.invalid" class="error">
+        GST number is required.
+      </div>
+    </div>
+
+    <!-- <div>
+      <input type="text" formControlName="hours" placeholder="Operating Hours" />
+      <div *ngIf="restaurantForm.get('hours')?.touched && restaurantForm.get('hours')?.invalid" class="error">
+        Operating hours are required.
+      </div>
+    </div> -->
+  </div>
+
+  <button type="submit" [disabled]="restaurantForm.invalid">Sign Up</button>
+
+  <p>Already have an account? <a [routerLink]="['/login-page']" [queryParams]="{ tab: 'restaurant' }">Login</a></p>
+</form>
+
+  </div>
+</div>
+
+<app-footer></app-footer>

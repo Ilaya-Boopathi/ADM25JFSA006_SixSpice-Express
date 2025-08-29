@@ -1,0 +1,66 @@
+/* Scroll Container */
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navigation Arrows */
+.nav-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+.nav-arrow:hover {
+  background: #670E10;
+  color: white;
+  transform: scale(1.1);
+}
+/* Food Icon Styling */
+.food-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 5px;
+   /* Optional: soft shadow */
+}
+
+/* Custom Card Styling */
+.custom-card {
+  border: none; /* Removed border */
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out;
+  width: 140px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 5px;
+  color: black;
+  /* word-break: break-word;
+  white-space: normal;
+  line-height: 1.2;
+  max-width: 200px; Adjust based on your layout */
+  /* text-align: center; */
+}

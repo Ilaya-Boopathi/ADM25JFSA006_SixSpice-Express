@@ -1,0 +1,46 @@
+<div class="container mt-4">
+  <!-- Restaurant Title -->
+  <div class="restaurant-title mb-4">
+    <h1>{{ restaurantName }}</h1>
+    <p>{{ restaurantLocation }}</p>
+  </div>
+
+  <!-- Food Cards -->
+  <div class="row">
+    <div class="col-6 col-md-4 col-lg-3 mb-4 p-2" *ngFor="let food of foods">
+      <div class="card h-100">
+        <img [src]="food.image" class="card-img-top" alt="{{ food.name }}" />
+
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div class="d-flex justify-content-between">
+            <div>
+              <h5 class="card-title mb-1">{{ food.name }}</h5>
+              <p class="card-text mb-1 text-muted">{{ food.category }}</p>
+              <p class="card-text mb-1 text-muted">{{ restaurantName }}</p>
+            </div>
+            <div class="text-end">
+              <p class="mb-1 fw-bold text-success">&#8377;{{ food.price }}</p>
+              <p class="mb-0 text-warning">⭐ 4.5</p>
+            </div>
+          </div>
+
+          <div class="text-center mt-3">
+            <button
+              *ngIf="!isItemAdded(food)"
+              class="btn btn-warning rounded-pill px-4"
+              (click)="addToCart(food)">
+              Add
+            </button>
+            <span *ngIf="isItemAdded(food)" class="text-success fw-bold">
+              Added to Cart
+            </span>
+
+            <p class="error-msg" *ngIf="hasItemError(food)">
+              Can't add to cart — different restaurant
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="d-flex justify-content-between align-items-center mb-3 title mt-4">
+  <h2>Menu Items</h2>
+  <button class="btn btn-primary px-3" (click)="openAddForm()">Add Item</button>
+</div>
+<div class="container-fluid card-body">
+    <table class="table table-bordered table-striped">
+        <thead class="px-5">
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of menuItems">
+          <td>{{ item.name }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.category }}</td>
+          
+          <td>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                [(ngModel)]="item.available"
+                (ngModelChange)="toggleAvailability(item)"
+              />
+              <label class="form-check-label">
+                {{ item.available ? 'Available' : 'Unavailable' }}
+              </label>
+            </div>
+          </td>
+
+          <td>
+  <div class="d-flex flex-column flex-md-row gap-2">
+    <button class="btn btn-warning w-100 w-md-auto" (click)="editItem(item)">Edit</button>
+    <button class="btn btn-danger w-100 w-md-auto" (click)="removeItem(item.id)">Remove</button>
+  </div>
+</td>
+
+        </tr>
+      </tbody>
+</table>
+</div>
+
+
+
+<div *ngIf="showForm" class="overlay">
+  <div class="modal-content">
+    <app-add-edit-menu-component
+      [item]="selectedItem"
+      [isEditMode]="isEditMode"
+      (formSubmit)="onFormSubmit($event)">
+    </app-add-edit-menu-component>
+  </div>
+</div>
+

@@ -1,0 +1,68 @@
+.restaurant-title h1 {
+  font-size: 2rem; /* Larger size */
+  font-weight: 700;
+  color: black; /* Match your theme */
+  margin: 0;
+}
+
+/* Menu Card *//* Food Card */
+.card {
+  max-width: 220px; /* Match restaurant card width */
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease-in-out;
+  font-size: 0.8rem;
+  user-select: none;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0,0.3);
+}
+
+.card-img-top {
+  height: 170px; /* Match restaurant image height */
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.card-body {
+  padding: 0.6rem; /* Match restaurant info padding */
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.card-text {
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+.fw-bold {
+  font-size: 0.75rem;
+}
+
+.btn-warning {
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.btn-warning:hover {
+  background-color: #f4511e;
+  color: #fff;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+

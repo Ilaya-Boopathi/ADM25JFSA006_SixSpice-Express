@@ -1,0 +1,2206 @@
+{
+  "restaurants": [
+    {
+      "id": "rest001",
+      "credentials": {
+        "email": "chillyworld@gmail.com",
+        "password": "Chillyworld@123"
+      },
+      "overview": {
+        "restaurantName": "Chilly World",
+        "image": "assets/Chicken Lollypop.jpg",
+        "cuisine": "Chinese",
+        "contact": "1234567890",
+        "email": "chillyworld@gmail.com",
+        "address": "145, GST Road, Vandalur - 600048",
+        "hours": "9:00 AM to 12:00 PM",
+        "owner": "Diwahar",
+        "gst": "27BPPPA1042B1ZA",
+        "location": "Egattur",
+        "totalOrdersToday": 42,
+        "pendingOrders": 34,
+        "deliveryPersonAvailable": 6,
+        "totalRevenue": 10980
+      },
+      "menuItems": [
+        {
+          "id": "1",
+          "name": "Gulab Jammun",
+          "price": 25,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest001",
+          "image": "assets/gulab jammun.jpg"
+        },
+        {
+          "id": "2",
+          "name": "Veg Burger",
+          "price": 100,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest001",
+          "image": "assets/veg burger.jpg"
+        },
+        {
+          "id": "3",
+          "name": "Dal Makhani",
+          "price": 180,
+          "category": "Appetizer",
+          "available": true,
+          "restaurantId": "rest001",
+          "image": "assets/Dal Makhani.jpg"
+        },
+        {
+          "id": "4",
+          "name": "Chicken Biryani",
+          "price": 300,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest001",
+          "image": "assets/Chicken Biriyani.jpg"
+        },
+        {
+          "id": "5",
+          "name": "Egg Curry",
+          "price": 120,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest001",
+          "image": "assets/egg curry.jpg"
+        },
+        {
+          "id": "6",
+          "name": "Tomato Soup",
+          "price": 100,
+          "category": "Appetizer",
+          "available": true,
+          "restaurantId": "rest001",
+          "image": "assets/tomato soup.jpg"
+        },
+        {
+          "id": "7",
+          "name": "Chicken Lollipop",
+          "price": 160,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest001",
+          "image": "assets/Chicken Lollypop.jpg"
+        },
+        {
+          "id": "8",
+          "name": "Butter Naan",
+          "price": 40,
+          "category": "Bread",
+          "available": true,
+          "restaurantId": "rest001",
+          "image": "assets/Butter Naan.jpg"
+        },
+        {
+          "id": "07a0",
+          "name": "Idiyappam",
+          "price": 100,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest001",
+          "image": "assets/Idiyappam.jpg"
+        },
+        {
+          "id": "vsru",
+          "name": "Kothu Parotta",
+          "price": 50,
+          "category": "Beverage",
+          "available": true,
+          "restaurantId": "rest001",
+          "image": "assets/Kothu Paratha.jpg"
+        },
+        {
+          "id": "0ev7",
+          "name": "Veg Fried Rice",
+          "price": 150,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest001",
+          "image": "assets/veg fried rice.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Ramesh",
+          "phoneNumber": "9876543210",
+          "status": "Available",
+          "badge": "success",
+          "id": "d5f9"
+        },
+        {
+          "name": "Gokul",
+          "phoneNumber": "9589893885",
+          "status": "Delivering",
+          "badge": "secondary",
+          "id": "b54b"
+        },
+        {
+          "name": "Kumar",
+          "phoneNumber": "9090909090",
+          "status": "Available",
+          "badge": "success",
+          "id": "aa7e"
+        },
+        {
+          "name": "Santhosh",
+          "phoneNumber": "9345678901",
+          "status": "Available",
+          "badge": "success",
+          "id": "cd24"
+        },
+        {
+          "name": "Raja",
+          "phoneNumber": "8473839583",
+          "status": "Available",
+          "badge": "success",
+          "id": "g04d"
+        },
+        {
+          "name": "Rajesh",
+          "phoneNumber": "8357857877",
+          "status": "Available",
+          "badge": "success",
+          "id": "kwfh"
+        },
+        {
+          "name": "Sanjay",
+          "phoneNumber": "9428983434",
+          "status": "Available",
+          "badge": "success",
+          "id": "w5rl"
+        }
+      ],
+      "orders": [
+        {
+          "orderId": "ORD001",
+          "customerName": "John Doe",
+          "item": "Paneer Tikka",
+          "status": "Delivered",
+          "total": 250,
+          "assignedAgent": "Kumar",
+          "id": "21ee"
+        },
+        {
+          "orderId": "ORD002",
+          "customerName": "Jane Smith",
+          "item": "Veg Biryani",
+          "status": "Delivered",
+          "total": 180,
+          "assignedAgent": "Kavitha",
+          "id": "98de"
+        },
+        {
+          "orderId": "ORD004",
+          "customerName": "Emily Davis",
+          "item": "Butter Naan",
+          "status": "Delivered",
+          "total": 100,
+          "assignedAgent": "Santhosh",
+          "id": "372b"
+        },
+        {
+          "orderId": "ORD005",
+          "customerName": "David Wilson",
+          "item": "Chicken Curry",
+          "status": "Delivered",
+          "total": 220,
+          "assignedAgent": "Ramesh",
+          "id": "5260"
+        },
+        {
+          "orderId": "ORD006",
+          "customerName": "David Wilson",
+          "item": "Chicken Curry",
+          "status": "Delivered",
+          "total": 220,
+          "assignedAgent": "Ramesh",
+          "id": "2474"
+        },
+        {
+          "orderId": "ORD007",
+          "customerName": "David Wilson",
+          "item": "Chicken Curry",
+          "status": "Delivered",
+          "total": 220,
+          "assignedAgent": "Ramesh",
+          "id": "6622"
+        },
+        {
+          "orderId": "ORD008",
+          "customerName": "Raja",
+          "item": "Dosa",
+          "status": "Delivered",
+          "total": 110,
+          "assignedAgent": "Ramesh",
+          "id": "8822"
+        },
+        {
+          "orderId": "ORD009",
+          "customerName": "David Wilson",
+          "item": "Chicken Curry",
+          "status": "Delivered",
+          "total": 220,
+          "assignedAgent": "Kavitha",
+          "id": "22"
+        },
+        {
+          "orderId": "ORD1990",
+          "customerName": "Abishek",
+          "item": "Veg Burger, Tomato Soup, Grilled Sandwich",
+          "status": "Delivered",
+          "total": 360,
+          "assignedAgent": "Ramesh",
+          "id": "9x08",
+          "userId": "user003"
+        },
+        {
+          "orderId": "ORD4257",
+          "customerName": "Raja",
+          "item": "Grilled Sandwich, Butter Naan",
+          "status": "Delivered",
+          "total": 200,
+          "assignedAgent": "",
+          "id": "l031",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD6912",
+          "customerName": "Raja",
+          "item": "Chicken Biryani, Grilled Sandwich",
+          "status": "Delivered",
+          "total": 460,
+          "assignedAgent": "",
+          "id": "3zu0",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD6448",
+          "customerName": "Raja",
+          "item": "Margherita Pizza, Lemon Juice",
+          "status": "Delivered",
+          "total": 75,
+          "assignedAgent": "",
+          "id": "p34e",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD1887",
+          "customerName": "Raja",
+          "item": "Veg Burger, Tomato Soup",
+          "status": "Delivered",
+          "total": 200,
+          "assignedAgent": "",
+          "id": "9ngg",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD8774",
+          "customerName": "Raja",
+          "item": "Caesar Salad, Dosa",
+          "status": "Delivered",
+          "total": 280,
+          "assignedAgent": "",
+          "id": "8zpf",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD455",
+          "customerName": "Raja",
+          "item": "Chicken Biryani, Butter Naan",
+          "status": "Delivered",
+          "total": 340,
+          "assignedAgent": "",
+          "id": "r6dr",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD5353",
+          "customerName": "Raja",
+          "item": "Margherita Pizza, Fried Rice",
+          "status": "Delivered",
+          "total": 175,
+          "assignedAgent": "Gokul",
+          "id": "wyug",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD7116",
+          "customerName": "Raja",
+          "item": "Grilled Sandwich, Lemon Juice",
+          "status": "Delivered",
+          "total": 210,
+          "assignedAgent": "Sanjay",
+          "id": "owee",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD238",
+          "customerName": "Raja",
+          "item": "French Fries, Butter Naan",
+          "status": "Delivered",
+          "total": 160,
+          "assignedAgent": "Santhosh",
+          "id": "1wmw",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD5584",
+          "customerName": "Raja",
+          "item": "Butter Naan, French Fries",
+          "status": "Delivered",
+          "total": 160,
+          "assignedAgent": "",
+          "id": "fr3a",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD5540",
+          "customerName": "Raja",
+          "item": "French Fries, Grilled Sandwich",
+          "status": "Delivered",
+          "total": 280,
+          "assignedAgent": "Kumar",
+          "id": "9cj6",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD7902",
+          "customerName": "Raja",
+          "item": "Dosa, Idly",
+          "status": "Delivered",
+          "total": 200,
+          "assignedAgent": "Raja",
+          "id": "ikm1",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD2566",
+          "customerName": "Raja",
+          "item": "Tomato Soup, Grilled Sandwich",
+          "status": "Delivered",
+          "total": 260,
+          "assignedAgent": "Ramesh",
+          "id": "qcsw",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD2023",
+          "customerName": "Raja",
+          "item": "Margherita Pizza, Caesar Salad",
+          "status": "Delivered",
+          "total": 205,
+          "assignedAgent": "",
+          "id": "k4w4",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD8138",
+          "customerName": "Raja",
+          "item": "Veg Burger, Grilled Sandwich",
+          "status": "Delivered",
+          "total": 260,
+          "assignedAgent": "Gokul",
+          "id": "7q65",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD9886",
+          "customerName": "Raja",
+          "item": "Veg Burger, Chicken Biryani",
+          "status": "Delivered",
+          "total": 400,
+          "assignedAgent": "Ramesh",
+          "id": "ximx",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD7094",
+          "customerName": "Raja",
+          "item": "Margherita Pizza",
+          "status": "Delivered",
+          "total": 25,
+          "assignedAgent": "Kumar",
+          "id": "139k",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD3778",
+          "customerName": "Raja",
+          "item": "Margherita Pizza, Caesar Salad",
+          "status": "Delivered",
+          "total": 205,
+          "assignedAgent": "Ramesh",
+          "id": "i5bq",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD3184",
+          "customerName": "Raja",
+          "item": "Tomato Soup, Lemon Juice",
+          "status": "Delivered",
+          "total": 150,
+          "assignedAgent": "Sanjay",
+          "id": "r328",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD5968",
+          "customerName": "Raja",
+          "item": "Dosa, Fried Rice",
+          "status": "Delivered",
+          "total": 250,
+          "assignedAgent": "Gokul",
+          "id": "r7on",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD9519",
+          "customerName": "Raja",
+          "item": "French Fries, Grilled Sandwich",
+          "status": "Delivered",
+          "total": 280,
+          "assignedAgent": "Gokul",
+          "id": "8mf7",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD3372",
+          "customerName": "Raja",
+          "item": "Veg Burger, Caesar Salad",
+          "status": "Delivered",
+          "total": 280,
+          "assignedAgent": "Ramesh",
+          "id": "r1y1",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD9917",
+          "customerName": "Raja",
+          "item": "Veg Burger, Tomato Soup",
+          "status": "Delivered",
+          "total": 200,
+          "assignedAgent": "Gokul",
+          "id": "kkli",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD9215",
+          "customerName": "Abishek Raja",
+          "item": "Veg Burger, Tomato Soup",
+          "status": "Delivered",
+          "total": 200,
+          "assignedAgent": "Ramesh",
+          "id": "groy",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD1838",
+          "customerName": "Abishek Raja",
+          "item": "French Fries, Veg Burger",
+          "status": "Delivered",
+          "total": 220,
+          "assignedAgent": "",
+          "id": "y8y5",
+          "userId": "user004"
+        },
+        {
+          "orderId": "ORD1284",
+          "customerName": "Salik",
+          "item": "Veg Burger, Fried Rice",
+          "status": "Delivered",
+          "total": 250,
+          "assignedAgent": "Gokul",
+          "id": "4lg9",
+          "userId": "user005"
+        },
+        {
+          "orderId": "ORD8847",
+          "customerName": "Salik",
+          "item": "Caesar Salad, Dosa",
+          "status": "Delivered",
+          "total": 280,
+          "assignedAgent": "Kumar",
+          "id": "kpqw",
+          "userId": "user005"
+        },
+        {
+          "orderId": "ORD117",
+          "customerName": "Salik",
+          "item": "Tomato Soup, Grilled Sandwich",
+          "status": "Delivered",
+          "total": 260,
+          "assignedAgent": "Kumar",
+          "id": "0nth",
+          "userId": "user005"
+        },
+        {
+          "orderId": "ORD8393",
+          "customerName": "Ilaya Boopathi U",
+          "item": "Veg Burger, Dal Makhani, Chicken Biryani",
+          "status": "Delivered",
+          "total": 580,
+          "assignedAgent": "",
+          "id": "eczg",
+          "userId": "user006"
+        },
+        {
+          "orderId": "ORD6565",
+          "customerName": "Ilaya Boopathi U",
+          "item": "Kothu Parotta",
+          "status": "Delivered",
+          "total": 50,
+          "assignedAgent": "",
+          "id": "uf4g",
+          "userId": "user006"
+        },
+        {
+          "orderId": "ORD4764",
+          "customerName": "Ranjith",
+          "item": "Dal Makhani, Veg Burger",
+          "status": "Delivered",
+          "total": 280,
+          "assignedAgent": "",
+          "id": "xzec",
+          "userId": "user002"
+        },
+        {
+          "orderId": "ORD3908",
+          "customerName": "Ranjith",
+          "item": "Veg Burger, Dal Makhani",
+          "status": "Pending",
+          "total": 920,
+          "assignedAgent": "",
+          "id": "2ycq",
+          "userId": "user002"
+        },
+        {
+          "orderId": "ORD4677",
+          "customerName": "Ranjith",
+          "item": "Veg Burger, Dal Makhani, Chicken Biryani, Gulab Jammun",
+          "status": "Delivered",
+          "total": 805,
+          "assignedAgent": "Santhosh",
+          "id": "m8bt",
+          "userId": "user002"
+        }
+      ]
+    },
+    {
+      "id": "rest002",
+      "credentials": {
+        "email": "chris@gmail.com",
+        "password": "Chris@123"
+      },
+      "overview": {
+        "restaurantName": "Chris Restaurant",
+        "image": "assets/veg sandwich.jpg",
+        "cuisine": "Indian",
+        "contact": "7486739878",
+        "email": "chris@gmail.com",
+        "address": "132, Max Kailash, Rajiv Gandhi Salai, Sholinganallur, Chennai",
+        "hours": "9AM - 10PM",
+        "owner": "Abishek Raja",
+        "location": "Sholinganallur",
+        "gst": "28BPPPA1042B1ZA",
+        "totalOrdersToday": 14,
+        "pendingOrders": 14,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 2800
+      },
+      "menuItems": [
+        {
+          "id": "355",
+          "name": "Masala Dosa",
+          "price": 100,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest002",
+          "image": "assets/Masala Dosa.jpg"
+        },
+        {
+          "id": "345",
+          "name": "Veg Momos",
+          "price": 120,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest002",
+          "image": "assets/veg momos.jpg"
+        },
+        {
+          "id": "kxsz",
+          "name": "Veg Sandwich",
+          "price": 20,
+          "category": "Beverage",
+          "available": true,
+          "restaurantId": "rest002",
+          "image": "assets/veg sandwich.jpg"
+        },
+        {
+          "id": "a7lk",
+          "name": "Pizza",
+          "price": 200,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest002",
+          "image": "assets/veg pizza.jpg"
+        },
+        {
+          "id": "xyz",
+          "name": "Veg Burger",
+          "price": 100,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest002",
+          "image": "assets/veg burger.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Diwahar",
+          "phoneNumber": "8935893599",
+          "status": "Available",
+          "badge": "success",
+          "id": "r0zg",
+          "restaurantId": "rest002"
+        },
+        {
+          "name": "Dinesh",
+          "phoneNumber": "9984673985",
+          "status": "Available",
+          "badge": "success",
+          "id": "tg09"
+        },
+        {
+          "name": "Joel",
+          "phoneNumber": "9398598379",
+          "status": "Available",
+          "badge": "success",
+          "id": "y34g"
+        },
+        {
+          "name": "Tommy",
+          "phoneNumber": "9835893763",
+          "status": "Available",
+          "badge": "success",
+          "id": "0moc"
+        }
+      ],
+      "orders": [
+        {
+          "orderId": "ORD3803",
+          "customerName": "Ranjith",
+          "item": "Veg Momos, Veg Sandwich, Pizza",
+          "status": "Delivered",
+          "total": 340,
+          "assignedAgent": "Joel",
+          "id": "w17u",
+          "userId": "user002"
+        }
+      ]
+    },
+    {
+      "id": "rest003",
+      "credentials": {
+        "email": "burgerking@gmail.com",
+        "password": "Burger@King123"
+      },
+      "overview": {
+        "restaurantName": "Burger King",
+        "cuisine": "Burgers, American",
+        "contact": "7208966748",
+        "email": "burgerking@gmail.com",
+        "address": "Shop No 12 & 13, Food Court, Marina Mall Egattur Chennai - 600040",
+        "location": "Egattur",
+        "hours": "9AM - 10PM",
+        "owner": "Sam",
+        "gst": "10APPPA1042B1ZA",
+        "totalOrdersToday": 2,
+        "pendingOrders": 2,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 814,
+        "image": "assets/Burger King.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "96mg",
+          "name": "Crispy Chicken Burger",
+          "price": 99,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest003",
+          "image": "assets/Crispy Chicken Burger.jpg"
+        },
+        {
+          "id": "xpxz",
+          "name": "King Fries",
+          "price": 139,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest003",
+          "image": "assets/King Fries.jpg"
+        },
+        {
+          "id": "qh3s",
+          "name": "Chocolate Thick Shake",
+          "price": 189,
+          "category": "Beverage",
+          "available": true,
+          "restaurantId": "rest003",
+          "image": "assets/Chocolate Thick Shake.jpg"
+        },
+        {
+          "id": "7fo5",
+          "name": "BK Fusion Sundae",
+          "price": 129,
+          "category": "Dessert",
+          "available": true,
+          "restaurantId": "rest003",
+          "image": "assets/BK Fusion Sundae.jpg"
+        },
+        {
+          "id": "w4pp",
+          "name": "Korean Spicy Fries",
+          "price": 159,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest003",
+          "image": "assets/Korean Spicy Fries.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Ramesh",
+          "phoneNumber": "9087654231",
+          "status": "Available",
+          "badge": "success",
+          "id": "gzb8"
+        },
+        {
+          "name": "Suresh",
+          "phoneNumber": "6574832921",
+          "status": "Available",
+          "badge": "success",
+          "id": "wa7g"
+        },
+        {
+          "name": "Maneesh",
+          "phoneNumber": "8907646232",
+          "status": "Available",
+          "badge": "success",
+          "id": "kscr"
+        }
+      ],
+      "orders": [
+        {
+          "orderId": "ORD9689",
+          "customerName": "Ilaya Boopathi U",
+          "item": "Crispy Chicken Burger, King Fries, Chocolate Thick Shake",
+          "status": "Delivered",
+          "total": 427,
+          "assignedAgent": "Ramesh",
+          "id": "7zwk",
+          "userId": "user001"
+        },
+        {
+          "orderId": "ORD7327",
+          "customerName": "Ranjith",
+          "item": "Crispy Chicken Burger, Chocolate Thick Shake",
+          "status": "Delivered",
+          "total": 387,
+          "assignedAgent": "Suresh",
+          "id": "boam",
+          "userId": "user002"
+        }
+      ]
+    },
+    {
+      "id": "rest004",
+      "credentials": {
+        "email": "amburbriyani@gmail.com",
+        "password": "Ambur@Briyani123"
+      },
+      "overview": {
+        "restaurantName": "Ambur Star Briyani",
+        "cuisine": "Biryani",
+        "contact": "9025257373",
+        "email": "amburbriyani@gmail.com",
+        "address": "NO:1, Dr. Kalaignar Karunanidhi Salai, Old Mahabalipuram Road, Sholinganallur, Chennai",
+        "location": "Sholinganallur",
+        "hours": "11AM - 10PM",
+        "owner": "Abishek",
+        "gst": "11BPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Chicken Briyani.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "6uf1",
+          "name": "Chicken Briyani",
+          "price": 330,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest004",
+          "image": "assets/Chicken Briyani.jpg"
+        },
+        {
+          "id": "4znr",
+          "name": "Mutton Briyani",
+          "price": 430,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest004",
+          "image": "assets/Mutton Briyani.jpg"
+        },
+        {
+          "id": "jhrx",
+          "name": "Chicken 65' Briyani",
+          "price": 370,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest004",
+          "image": "assets/Chicken 65 Briyani.jpg"
+        },
+        {
+          "id": "bq3q",
+          "name": "Egg Briyani",
+          "price": 280,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest004",
+          "image": "assets/Egg Briyani.jpg"
+        },
+        {
+          "id": "vi2r",
+          "name": "Nattu Kozhi Briyani",
+          "price": 349,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest004",
+          "image": "assets/Nattu Kozhi Briyani.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Salik",
+          "phoneNumber": "8976534213",
+          "status": "Available",
+          "badge": "success",
+          "id": "v1ro"
+        },
+        {
+          "name": "Ranjith",
+          "phoneNumber": "9087452246",
+          "status": "Available",
+          "badge": "success",
+          "id": "7m8n"
+        },
+        {
+          "name": "Shiva",
+          "phoneNumber": "6784924429",
+          "status": "Available",
+          "badge": "success",
+          "id": "ruqg"
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "rest005",
+      "credentials": {
+        "email": "geetham@gmail.com",
+        "password": "Geetham@123"
+      },
+      "overview": {
+        "restaurantName": "Geetham Veg Restaurant",
+        "cuisine": "South Indian, Sweets",
+        "contact": "6544653721",
+        "email": "geetham@gmail.com",
+        "address": "Rajiv Gandhi Salai, Chennai, Tamil Nadu 600119",
+        "location": "Padur",
+        "hours": "9AM - 10PM",
+        "owner": "Geetham",
+        "gst": "13DPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Rava Dosa.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "wsok",
+          "name": "Ghee Roast",
+          "price": 190,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest005",
+          "image": "assets/Ghee Roast.jpg"
+        },
+        {
+          "id": "f8fm",
+          "name": "Butter Roast",
+          "price": 190,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest005",
+          "image": "assets/Butter Roast.jpg"
+        },
+        {
+          "id": "x5ue",
+          "name": "Rava Dosa",
+          "price": 190,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest005",
+          "image": "assets/Rava Dosa.jpg"
+        },
+        {
+          "id": "k3h5",
+          "name": "Plain Dosa",
+          "price": 110,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest005",
+          "image": "assets/Plain Dosa.jpg"
+        },
+        {
+          "id": "2td1",
+          "name": "Onion Uthappam",
+          "price": 155,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest005",
+          "image": "assets/Onion Uthappam.jpg"
+        },
+        {
+          "id": "iyfc",
+          "name": "Black Coffee",
+          "price": 60,
+          "category": "Beverage",
+          "available": true,
+          "restaurantId": "rest005",
+          "image": "assets/Black Coffee.jpg"
+        },
+        {
+          "id": "1jsj",
+          "name": "Filter Coffee",
+          "price": 60,
+          "category": "Beverage",
+          "available": true,
+          "restaurantId": "rest005",
+          "image": "assets/Filter Coffee.jpg"
+        },
+        {
+          "id": "8xik",
+          "name": "Butter Roti",
+          "price": 100,
+          "category": "Bread",
+          "available": true,
+          "restaurantId": "rest005",
+          "image": "assets/Butter Roti.jpg"
+        },
+        {
+          "id": "kfzr",
+          "name": "Butter Naan",
+          "price": 100,
+          "category": "Bread",
+          "available": true,
+          "restaurantId": "rest005",
+          "image": "assets/Butter Naan.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Goud",
+          "phoneNumber": "6574839226",
+          "status": "Available",
+          "badge": "success",
+          "id": "tfgp"
+        },
+        {
+          "name": "Ika Sai",
+          "phoneNumber": "7564322435",
+          "status": "Available",
+          "badge": "success",
+          "id": "e0k1"
+        },
+        {
+          "name": "Pilli",
+          "phoneNumber": "9372627214",
+          "status": "Available",
+          "badge": "success",
+          "id": "jp9k"
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "rest006",
+      "credentials": {
+        "email": "zaitoon@gmail.com",
+        "password": "Zaitoon@123"
+      },
+      "overview": {
+        "restaurantName": "Zaitoon",
+        "cuisine": "Biryani, Arabian",
+        "contact": "6353738245",
+        "email": "zaitoon@gmail.com",
+        "address": "Egattur, Chennai, TamilNadu ",
+        "location": "Egattur",
+        "hours": "9AM - 10PM",
+        "owner": "Manikandan",
+        "gst": "15FPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Aloo Parota.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "b0hy",
+          "name": "Chicken Tikka",
+          "price": 349,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest006",
+          "image": "assets/Chicken Tikka.jpg"
+        },
+        {
+          "id": "ynqr",
+          "name": "Paneer Tikka",
+          "price": 349,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest006",
+          "image": "assets/Paneer Tikka.jpg"
+        },
+        {
+          "id": "nkrw",
+          "name": "Chicken Craver",
+          "price": 119,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest006",
+          "image": "assets/Chicken Craver.jpg"
+        },
+        {
+          "id": "fnlk",
+          "name": "Paneer Craver",
+          "price": 119,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest006",
+          "image": "assets/Paneer Craver.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Yentrapati",
+          "phoneNumber": "6437282193",
+          "status": "Available",
+          "badge": "success",
+          "id": "obci"
+        },
+        {
+          "name": "Mithun",
+          "phoneNumber": "9887557724",
+          "status": "Available",
+          "badge": "success",
+          "id": "myfv"
+        },
+        {
+          "name": "Batchu",
+          "phoneNumber": "9876368234",
+          "status": "Available",
+          "badge": "success",
+          "id": "2s5q"
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "rest007",
+      "credentials": {
+        "email": "ibaco@gmail.com",
+        "password": "Ibaco@123"
+      },
+      "overview": {
+        "restaurantName": "Ibaco",
+        "cuisine": "Desserts, Ice Cream",
+        "contact": "6546373243",
+        "email": "ibaco@gmail.com",
+        "address": " No 2/62 New Pushpa Navin Shopping Complex, Navalur, Chennai",
+        "location": "Navalur",
+        "hours": "",
+        "owner": "Murugavel",
+        "gst": "16GPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Dark Chocolate Ice Cream.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "5h16",
+          "name": "Chocolate Ice Cream",
+          "price": 127,
+          "category": "Dessert",
+          "available": true,
+          "restaurantId": "rest007",
+          "image": "assets/Chocolate Ice Cream.jpg"
+        },
+        {
+          "id": "o0pp",
+          "name": "Vanilla Ice Cream",
+          "price": 127,
+          "category": "Dessert",
+          "available": true,
+          "restaurantId": "rest007",
+          "image": "assets/Vanilla Ice Cream.jpg"
+        },
+        {
+          "id": "6ipc",
+          "name": "Strawberry Ice Cream",
+          "price": 127,
+          "category": "Dessert",
+          "available": true,
+          "restaurantId": "rest007",
+          "image": "assets/Strawberry Ice Cream.jpg"
+        },
+        {
+          "id": "6wpm",
+          "name": "Dark Chocolate Ice Cream",
+          "price": 127,
+          "category": "Dessert",
+          "available": true,
+          "restaurantId": "rest007",
+          "image": "assets/Dark Chocolate Ice Cream.jpg"
+        },
+        {
+          "id": "d5ll",
+          "name": "Mango Raspberry Ice Cream",
+          "price": 127,
+          "category": "Dessert",
+          "available": true,
+          "restaurantId": "rest007",
+          "image": "assets/Mango Raspberry Ice Cream.jpg"
+        }
+      ],
+      "deliveryAgents": [],
+      "orders": []
+    },
+    {
+      "id": "rest008",
+      "credentials": {
+        "email": "a2b@gmail.com",
+        "password": "A2b@123"
+      },
+      "overview": {
+        "restaurantName": "A2B",
+        "cuisine": "South Indian, Sweets  ",
+        "contact": "9086436242",
+        "email": "a2b@gmail.com",
+        "address": "First Floor, Shop No : F013, The Marina Mall, Old Mahabalipuram Road, Egattur, Chennai, Tamil Nadu 603103, Chennai (Madras) 603103 ",
+        "location": "Egattur",
+        "hours": "9AM - 10PM",
+        "owner": "Anand",
+        "gst": "17HPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/South Indian Thalimeals.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "k271",
+          "name": "Aloo Parota",
+          "price": 130,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest008",
+          "image": "assets/Aloo Parota.jpg"
+        },
+        {
+          "id": "nlz4",
+          "name": "Sambar Rice",
+          "price": 105,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest008",
+          "image": "assets/Sambar Rice.jpg"
+        },
+        {
+          "id": "fmwj",
+          "name": "Curd Rice",
+          "price": 105,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest008",
+          "image": "assets/Curd Rice.jpg"
+        },
+        {
+          "id": "54m5",
+          "name": "Mini Lunch",
+          "price": 195,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest008",
+          "image": "assets/Mini Lunch.jpg"
+        },
+        {
+          "id": "ixj6",
+          "name": "South Indian Thalimeals",
+          "price": 220,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest008",
+          "image": "assets/South Indian Thalimeals.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Arun",
+          "phoneNumber": "6575357212",
+          "status": "Available",
+          "badge": "success",
+          "id": "eera"
+        },
+        {
+          "name": "Prasanth",
+          "phoneNumber": "8534213490",
+          "status": "Available",
+          "badge": "success",
+          "id": "recl"
+        },
+        {
+          "name": "Sayan",
+          "phoneNumber": "7645893432",
+          "status": "Available",
+          "badge": "success",
+          "id": "9f3x"
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "rest009",
+      "credentials": {
+        "email": "konguvilasam@gmail.com",
+        "password": "Kongu@123"
+      },
+      "overview": {
+        "restaurantName": "KONGU VILASAM",
+        "cuisine": "Chettinad, South Indian  ",
+        "contact": "9087872988",
+        "email": "konguvilasam@gmail.com",
+        "address": "4/145, 2nd Floor, Egattur, Chennai",
+        "location": "Egattur",
+        "hours": "9AM - 10PM",
+        "owner": "Ram",
+        "gst": "18IPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Mutton Chukka.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "8xiv",
+          "name": "Mutton Liver",
+          "price": 379,
+          "category": "Appetizer",
+          "available": true,
+          "restaurantId": "rest009",
+          "image": "assets/Mutton Liver.jpg"
+        },
+        {
+          "id": "4v50",
+          "name": "Mutton Chukka",
+          "price": 399,
+          "category": "Appetizer",
+          "available": true,
+          "restaurantId": "rest009",
+          "image": "assets/Mutton Chukka.jpg"
+        },
+        {
+          "id": "71b4",
+          "name": "Mutton Chops",
+          "price": 399,
+          "category": "Appetizer",
+          "available": true,
+          "restaurantId": "rest009",
+          "image": "assets/Mutton Chops.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Gokul",
+          "phoneNumber": "8567364355",
+          "status": "Available",
+          "badge": "success",
+          "id": "lpey"
+        },
+        {
+          "name": "Marimuthu",
+          "phoneNumber": "8755634224",
+          "status": "Available",
+          "badge": "success",
+          "id": "r08x"
+        },
+        {
+          "name": "Asif",
+          "phoneNumber": "9865625545",
+          "status": "Available",
+          "badge": "success",
+          "id": "jibr"
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "rest010",
+      "credentials": {
+        "email": "chaikings@gmail.com",
+        "password": "Chaikings@123"
+      },
+      "overview": {
+        "restaurantName": "Chai Kings",
+        "cuisine": "Beverages, Snacks",
+        "contact": "9876545673",
+        "email": "chaikings@gmail.com",
+        "address": "316, 1st Floor, Om Road, Sholinganallur, Chennai",
+        "location": "Sholinganallur",
+        "hours": "9AM - 10PM",
+        "owner": "Yentrapati",
+        "gst": "19JPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Mocha Tea.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "4ptb",
+          "name": "Thai Red Tea",
+          "price": 125,
+          "category": "Beverage",
+          "available": true,
+          "restaurantId": "rest010",
+          "image": "assets/Thai Red Tea.jpg"
+        },
+        {
+          "id": "lkvj",
+          "name": "Mocha Tea",
+          "price": 99,
+          "category": "Beverage",
+          "available": true,
+          "restaurantId": "rest010",
+          "image": "assets/Mocha Tea.jpg"
+        },
+        {
+          "id": "eog1",
+          "name": "Ginger Lemon Chai",
+          "price": 99,
+          "category": "Beverage",
+          "available": true,
+          "restaurantId": "rest010",
+          "image": "assets/Ginger Lemon Tea.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Jaweedh",
+          "phoneNumber": "6543343572",
+          "status": "Available",
+          "badge": "success",
+          "id": "8tta"
+        },
+        {
+          "name": "Naveen",
+          "phoneNumber": "9875346576",
+          "status": "Available",
+          "badge": "success",
+          "id": "6ga4"
+        },
+        {
+          "name": "Ganapathy",
+          "phoneNumber": "8764467822",
+          "status": "Available",
+          "badge": "success",
+          "id": "o73a"
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "rest011",
+      "credentials": {
+        "email": "bikkgane@gmail.com",
+        "password": "Bikkgane@123"
+      },
+      "overview": {
+        "restaurantName": "Bikkgane Biryani",
+        "cuisine": "Biryani, Mughlai",
+        "contact": "7894567321",
+        "email": "bikkgane@gmail.com",
+        "address": "Shop 4, Plot 20, 1st Floor, Sea Spray, Gomathi Nagar, Inner Ring Road, Velachery, Chennai",
+        "location": "Velachery",
+        "hours": "9AM - 10PM",
+        "owner": "Mohammed Asif",
+        "gst": "20KPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Chicken 65 Biryani.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "9tv0",
+          "name": "Pepper Chicken Biryani",
+          "price": 249,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest011",
+          "image": "assets/Pepper Chicken Biryani.jpg"
+        },
+        {
+          "id": "9ubz",
+          "name": "Chicken 65 Biryani",
+          "price": 249,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest011",
+          "image": "assets/Chicken 65 Biryani.jpg"
+        },
+        {
+          "id": "xggw",
+          "name": "Egg Biryani Bowl",
+          "price": 219,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest011",
+          "image": "assets/Egg Biryani Bowl.jpg"
+        },
+        {
+          "id": "pfv5",
+          "name": "Paneer 65 Biryani",
+          "price": 249,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest011",
+          "image": "assets/Paneer 65 Biryani.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Sudesh",
+          "phoneNumber": "9456789876",
+          "status": "Available",
+          "badge": "success",
+          "id": "zcwv"
+        },
+        {
+          "name": "Padmesh",
+          "phoneNumber": "9456776545",
+          "status": "Available",
+          "badge": "success",
+          "id": "cfks"
+        },
+        {
+          "name": "Shashank",
+          "phoneNumber": "8765335645",
+          "status": "Available",
+          "badge": "success",
+          "id": "p6z9"
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "rest012",
+      "credentials": {
+        "email": "Salemrr@gmail.com",
+        "password": "Salemrr@123"
+      },
+      "overview": {
+        "restaurantName": "Salem RR Biriyani",
+        "cuisine": "Biryani, Chettinad",
+        "contact": "8765346642",
+        "email": "Salemrr@gmail.com",
+        "address": "86 Velachery Main Road, Chennai (Madras), Tamil Nadu 600073 ",
+        "location": "Velachery",
+        "hours": "",
+        "owner": "Vijay",
+        "gst": "21LPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Mutton Biryani.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "0in4",
+          "name": "Mutton Biryani",
+          "price": 399,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest012",
+          "image": "assets/Mutton Biryani.jpg"
+        },
+        {
+          "id": "cb0i",
+          "name": "Tandoori Biryani",
+          "price": 449,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest012",
+          "image": "assets/Tandoori Biryani.jpg"
+        },
+        {
+          "id": "tj63",
+          "name": "Chicken Fried Rice",
+          "price": 199,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest012",
+          "image": "assets/Chicken Fried Rice.jpg"
+        },
+        {
+          "id": "9y75",
+          "name": "Chicken Noodles",
+          "price": 209,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest012",
+          "image": "assets/Chicken Noodles.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Hari Chandan",
+          "phoneNumber": "8763532434",
+          "status": "Available",
+          "badge": "success",
+          "id": "ltzd"
+        },
+        {
+          "name": "Vikashram",
+          "phoneNumber": "7463526292",
+          "status": "Available",
+          "badge": "success",
+          "id": "2gfb"
+        },
+        {
+          "name": "Yenumula",
+          "phoneNumber": "8736455224",
+          "status": "Available",
+          "badge": "success",
+          "id": "w0yp"
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "rest013",
+      "credentials": {
+        "email": "erodeamman@gmail.com",
+        "password": "Erodeamman@123"
+      },
+      "overview": {
+        "restaurantName": "Erode Amman Mess",
+        "cuisine": "South Indian",
+        "contact": "7899453622",
+        "email": "erodeamman@gmail.com",
+        "address": "163, LB Road, SMS Building, Thiruvanmiyur, Chennai",
+        "location": "Velachery",
+        "hours": "",
+        "owner": "Meenakshi",
+        "gst": "22MPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Fish Finger.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "c4rh",
+          "name": "Prawn Fry",
+          "price": 299,
+          "category": "Appetizer",
+          "available": true,
+          "restaurantId": "rest013",
+          "image": "assets/Prawn Fry.jpg"
+        },
+        {
+          "id": "xm2n",
+          "name": "Fish Finger",
+          "price": 299,
+          "category": "Appetizer",
+          "available": true,
+          "restaurantId": "rest013",
+          "image": "assets/Fish Finger.jpg"
+        },
+        {
+          "id": "0ptj",
+          "name": "Nethili Fry",
+          "price": 249,
+          "category": "Appetizer",
+          "available": true,
+          "restaurantId": "rest013",
+          "image": "assets/Nethili Fry.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Sayan",
+          "phoneNumber": "6545245674",
+          "status": "Available",
+          "badge": "success",
+          "id": "e941"
+        },
+        {
+          "name": "MeiVelan",
+          "phoneNumber": "7456783234",
+          "status": "Available",
+          "badge": "success",
+          "id": "n218"
+        },
+        {
+          "name": "harigaran",
+          "phoneNumber": "8743456734",
+          "status": "Available",
+          "badge": "success",
+          "id": "pxzz"
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "rest014",
+      "credentials": {
+        "email": "a1chips@gmail.com",
+        "password": "A1chips@123"
+      },
+      "overview": {
+        "restaurantName": "A1 Chips",
+        "cuisine": "Snacks",
+        "contact": "7654221353",
+        "email": "a1chips@gmail.com",
+        "address": "No. 215A, Medavakkam Main Rd, Senthuran Colony, Madipakkam, Chennai",
+        "location": "Madipakkam",
+        "hours": "",
+        "owner": "Muruga Vel",
+        "gst": "23NPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Badam cookies.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "6rkv",
+          "name": "Sweet ghee biscuit ",
+          "price": 49,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest014",
+          "image": "assets/Sweet ghee biscuit.jpg"
+        },
+        {
+          "id": "t0vw",
+          "name": "Badam cookies",
+          "price": 149,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest014",
+          "image": "assets/Badam cookies.jpg"
+        },
+        {
+          "id": "f77v",
+          "name": " Mysorepa",
+          "price": 149,
+          "category": "Snacks",
+          "available": true,
+          "restaurantId": "rest014",
+          "image": "assets/Mysorepa.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "GokulNath",
+          "phoneNumber": "8752345523",
+          "status": "Available",
+          "badge": "success",
+          "id": "zy6l"
+        },
+        {
+          "name": "Suresh Pilli",
+          "phoneNumber": "9886345612",
+          "status": "Available",
+          "badge": "success",
+          "id": "nzr2"
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "rest015",
+      "credentials": {
+        "email": "copperkitchen@gmail.com",
+        "password": "Copperkitchen@123"
+      },
+      "overview": {
+        "restaurantName": "Copper Kitchen",
+        "cuisine": "Biryani, Barbecue  ",
+        "contact": "8734566622",
+        "email": "copperkitchen@gmail.com",
+        "address": "No 24, Velachery, Chennai",
+        "location": "Velachery",
+        "hours": "9AM - 10PM",
+        "owner": "Rajesh",
+        "gst": "24OPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Paratha Chicken 65 Combo.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "ct59",
+          "name": "Paratha Chicken 65 Combo",
+          "price": 349,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest015",
+          "image": "assets/Paratha Chicken 65 Combo.jpg"
+        },
+        {
+          "id": "7r88",
+          "name": "Paratha Bbq Combo",
+          "price": 349,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest015",
+          "image": "assets/Paratha Bbq Combo.jpg"
+        },
+        {
+          "id": "esv0",
+          "name": "Kizhi Parotta",
+          "price": 299,
+          "category": "Main Course",
+          "available": true,
+          "restaurantId": "rest015",
+          "image": "assets/Kizhi Parotta.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Dharun",
+          "phoneNumber": "8764345642",
+          "status": "Available",
+          "badge": "success",
+          "id": "apkg"
+        },
+        {
+          "name": "Kishan",
+          "phoneNumber": "8345672346",
+          "status": "Available",
+          "badge": "success",
+          "id": "4pbn"
+        },
+        {
+          "name": "Kumar",
+          "phoneNumber": "8456723344",
+          "status": "Available",
+          "badge": "success",
+          "id": "r781"
+        }
+      ],
+      "orders": []
+    },
+    {
+      "id": "rest016",
+      "credentials": {
+        "email": "punjabgrill@gmail.com",
+        "password": "Punjabgrill@123"
+      },
+      "overview": {
+        "restaurantName": "Punjab Grill",
+        "cuisine": "Kebabs, Biryani  ",
+        "contact": "9874234567",
+        "email": "punjabgrill@gmail.com",
+        "address": "142, Ground Floor, Phoenix Market City, Velachery Main Road, Indira, Chennai",
+        "location": "Velachery",
+        "hours": "9AM - 10PM",
+        "owner": "Harshan",
+        "gst": "25PPPPA1042B1ZA",
+        "totalOrdersToday": 0,
+        "pendingOrders": 0,
+        "deliveryPersonAvailable": 0,
+        "totalRevenue": 0,
+        "image": "assets/Tandoori Chicken.jpg"
+      },
+      "menuItems": [
+        {
+          "id": "8kky",
+          "name": "Beetroot Kebab",
+          "price": 349,
+          "category": "Appetizer",
+          "available": true,
+          "restaurantId": "rest016",
+          "image": "assets/Beetroot Kebab.jpg"
+        },
+        {
+          "id": "bo65",
+          "name": "Tandoori Chicken",
+          "price": 549,
+          "category": "Appetizer",
+          "available": true,
+          "restaurantId": "rest016",
+          "image": "assets/Tandoori Chicken.jpg"
+        },
+        {
+          "id": "yijz",
+          "name": "Chicken Changezi",
+          "price": 569,
+          "category": "Appetizer",
+          "available": true,
+          "restaurantId": "rest016",
+          "image": "assets/Chicken Changezi.jpg"
+        }
+      ],
+      "deliveryAgents": [
+        {
+          "name": "Kumareshan",
+          "phoneNumber": "7456234312",
+          "status": "Available",
+          "badge": "success",
+          "id": "b2j0"
+        },
+        {
+          "name": "Ravi Kumar",
+          "phoneNumber": "8345672649",
+          "status": "Available",
+          "badge": "success",
+          "id": "fz4u"
+        }
+      ],
+      "orders": []
+    }
+  ],
+  "users": [
+    {
+      "id": "user001",
+      "email": "ilayaboopathi@gmail.com",
+      "password": "Ilayaboopathi@123",
+      "profile": {
+        "name": "Ilaya Boopathi U",
+        "phone": "6374885035",
+        "address": "1/136, Thalambur Rd, Samundeeswari Nagar, Navalur, Chennai 600130",
+        "profilePicture": null
+      },
+      "orders": [
+        {
+          "orderId": "ORD9689",
+          "restaurantId": "rest003",
+          "restaurant": "Burger King",
+          "orderDate": "2025-08-21",
+          "deliveryDate": "2025-08-21",
+          "status": "Delivered",
+          "deliveryAgentName": "",
+          "deliveryAgentPhone": "",
+          "items": [
+            {
+              "name": "Crispy Chicken Burger",
+              "quantity": 1,
+              "price": 99
+            },
+            {
+              "name": "King Fries",
+              "quantity": 1,
+              "price": 139
+            },
+            {
+              "name": "Chocolate Thick Shake",
+              "quantity": 1,
+              "price": 189
+            }
+          ]
+        }
+      ],
+      "cart": [],
+      "totalAmount": 0,
+      "transactions": [
+        {
+          "id": "1dyu",
+          "transactionId": "TXN-1755765956837",
+          "method": "COD",
+          "cardType": "Unknown",
+          "coupon": "",
+          "amount": 427,
+          "orderId": "ORD9689"
+        }
+      ]
+    },
+    {
+      "id": "user002",
+      "email": "ranjith@gmail.com",
+      "password": "Ranjith@123",
+      "profile": {
+        "name": "Ranjith",
+        "phone": "7305383553",
+        "address": "no 9a 8th street cdn nagar nerkundram chennai",
+        "profilePicture": null
+      },
+      "orders": [
+        {
+          "orderId": "ORD7327",
+          "restaurantId": "rest003",
+          "restaurant": "Burger King",
+          "orderDate": "2025-08-22",
+          "deliveryDate": "2025-08-22",
+          "status": "Delivered",
+          "deliveryAgentName": "",
+          "deliveryAgentPhone": "",
+          "items": [
+            {
+              "name": "Crispy Chicken Burger",
+              "quantity": 2,
+              "price": 99
+            },
+            {
+              "name": "Chocolate Thick Shake",
+              "quantity": 1,
+              "price": 189
+            }
+          ]
+        },
+        {
+          "orderId": "ORD4764",
+          "restaurantId": "rest001",
+          "restaurant": "Chilly World",
+          "orderDate": "2025-08-25",
+          "deliveryDate": "2025-08-25",
+          "status": "Delivered",
+          "deliveryAgentName": "",
+          "deliveryAgentPhone": "",
+          "items": [
+            {
+              "name": "Dal Makhani",
+              "quantity": 1,
+              "price": 180
+            },
+            {
+              "name": "Veg Burger",
+              "quantity": 1,
+              "price": 100
+            }
+          ]
+        },
+        {
+          "orderId": "ORD3908",
+          "restaurantId": "rest001",
+          "restaurant": "Chilly World",
+          "orderDate": "2025-08-26",
+          "deliveryDate": "2025-08-26",
+          "status": "Pending",
+          "deliveryAgentName": "",
+          "deliveryAgentPhone": "",
+          "items": [
+            {
+              "name": "Veg Burger",
+              "quantity": 2,
+              "price": 100
+            },
+            {
+              "name": "Dal Makhani",
+              "quantity": 4,
+              "price": 180
+            }
+          ]
+        },
+        {
+          "orderId": "ORD4677",
+          "restaurantId": "rest001",
+          "restaurant": "Chilly World",
+          "orderDate": "2025-08-26",
+          "deliveryDate": "2025-08-26",
+          "status": "Delivered",
+          "deliveryAgentName": "",
+          "deliveryAgentPhone": "",
+          "items": [
+            {
+              "name": "Veg Burger",
+              "quantity": 3,
+              "price": 100
+            },
+            {
+              "name": "Dal Makhani",
+              "quantity": 1,
+              "price": 180
+            },
+            {
+              "name": "Chicken Biryani",
+              "quantity": 1,
+              "price": 300
+            },
+            {
+              "name": "Gulab Jammun",
+              "quantity": 1,
+              "price": 25
+            }
+          ]
+        },
+        {
+          "orderId": "ORD3803",
+          "restaurantId": "rest002",
+          "restaurant": "Chris Restaurant",
+          "orderDate": "2025-08-29",
+          "deliveryDate": "2025-08-29",
+          "status": "Delivered",
+          "deliveryAgentName": "",
+          "deliveryAgentPhone": "",
+          "items": [
+            {
+              "name": "Veg Momos",
+              "quantity": 1,
+              "price": 120
+            },
+            {
+              "name": "Veg Sandwich",
+              "quantity": 1,
+              "price": 20
+            },
+            {
+              "name": "Pizza",
+              "quantity": 1,
+              "price": 200
+            }
+          ]
+        }
+      ],
+      "cart": [],
+      "totalAmount": 0,
+      "transactions": [
+        {
+          "id": "76h7",
+          "transactionId": "TXN-1755843366749",
+          "method": "COD",
+          "cardType": "Unknown",
+          "coupon": "WELCOME25",
+          "amount": 362,
+          "orderId": "ORD7327"
+        },
+        {
+          "id": "356w",
+          "transactionId": "TXN-1756117351524",
+          "method": "COD",
+          "cardType": "Unknown",
+          "coupon": "",
+          "amount": 280,
+          "orderId": "ORD4764"
+        },
+        {
+          "id": "1y1n",
+          "transactionId": "TXN-1756180222298",
+          "method": "COD",
+          "cardType": "Unknown",
+          "coupon": "",
+          "amount": 920,
+          "orderId": "ORD3908"
+        },
+        {
+          "id": "r2e6",
+          "transactionId": "TXN-1756199193692",
+          "method": "COD",
+          "cardType": "Unknown",
+          "coupon": "WELCOME25",
+          "amount": 780,
+          "orderId": "ORD4677"
+        },
+        {
+          "id": "r2ae",
+          "transactionId": "TXN-1756444309110",
+          "method": "COD",
+          "cardType": "Unknown",
+          "coupon": "",
+          "amount": 340,
+          "orderId": "ORD3803"
+        }
+      ]
+    },
+    {
+      "id": "user003",
+      "email": "shiva@gmail.com",
+      "password": "Shiva@123",
+      "profile": {
+        "name": "Shiva Ganapathy",
+        "phone": "9874562234",
+        "address": ""
+      },
+      "orders": [],
+      "cart": [],
+      "totalAmount": 0,
+      "transactions": []
+    },
+    {
+      "id": "user004",
+      "email": "abishek@gmail.com",
+      "password": "Abishek@123",
+      "profile": {
+        "name": "Abishek",
+        "phone": "8875455634",
+        "address": ""
+      },
+      "orders": [],
+      "cart": [],
+      "totalAmount": 0,
+      "transactions": []
+    },
+    {
+      "id": "user005",
+      "email": "salik@gmail.com",
+      "password": "Salik@123",
+      "profile": {
+        "name": "Salik",
+        "phone": "9874562234",
+        "address": ""
+      },
+      "orders": [],
+      "cart": [],
+      "totalAmount": 0,
+      "transactions": []
+    },
+    {
+      "id": "user006",
+      "email": "prasanth@gmail.com",
+      "password": "Prasanth@123",
+      "profile": {
+        "name": "Prasanth",
+        "phone": "8676432213",
+        "address": ""
+      },
+      "orders": [],
+      "cart": [],
+      "totalAmount": 0,
+      "transactions": []
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<nav class=" navbar navbar-expand-lg navbar-dark w-100">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" routerLink="dashboard-layout">
+      <img src="images/logo.png" alt="Logo" width="36" height="36" class="d-inline-block align-text-top me-2 logo">
+      <span class="fw-bold ms-2 title">SixSpice Express</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+    <li class="nav-item me-2 mb-2">
+      <a class="btn nav-btn-custom d-flex align-items-center" routerLink="dashboard-component" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="fa-solid fa-gauge me-2"></i> Dashboard
+      </a>
+    </li>
+    <li class="nav-item me-2 mb-2">
+      <a class="btn nav-btn-custom d-flex align-items-center" routerLink="orders-component" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="fa-solid fa-receipt me-2"></i> Orders
+      </a>
+    </li>
+    <li class="nav-item me-2 mb-2">
+      <a class="btn nav-btn-custom d-flex align-items-center" routerLink="menu-component" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="fa-solid fa-utensils me-2"></i> Menu
+      </a>
+    </li>
+    <li class="nav-item me-2 mb-2">
+      <a class="btn nav-btn-custom d-flex align-items-center" routerLink="delivery-agent-component" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="fa-solid fa-motorcycle me-2"></i> Delivery
+      </a>
+    </li>
+    <li class="nav-item mb-2">
+      <a class="btn nav-btn-custom d-flex align-items-center" routerLink="restaurant-profile-component" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="fa-solid fa-user-circle me-2"></i> Profile
+      </a>
+    </li>
+  </ul>
+</div>
+  </div>
+</nav>
+
+<div style="height: 70px;"></div>

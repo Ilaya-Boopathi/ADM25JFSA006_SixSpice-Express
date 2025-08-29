@@ -1,0 +1,47 @@
+<div class="card mt-4">
+  <div class="card-header">
+    <h4>{{ isEditMode ? 'Edit Delivery Agent' : 'Add New Delivery Agent' }}</h4>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="agentForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Name Field -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Agent Name</label>
+        <input type="text" id="name" class="form-control" formControlName="name">
+        <div *ngIf="agentForm.get('name')?.invalid && agentForm.get('name')?.touched" class="text-danger">
+          <small *ngIf="agentForm.get('name')?.errors?.['required']">Name is required.</small>
+        </div>
+      </div>
+
+      <!-- Phone Field -->
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="text" id="phone" class="form-control" formControlName="phone">
+        <div *ngIf="agentForm.get('phone')?.invalid && agentForm.get('phone')?.touched" class="text-danger">
+          <small *ngIf="agentForm.get('phone')?.errors?.['required']">Phone number is required.</small>
+          <small *ngIf="agentForm.get('phone')?.errors?.['pattern']">Enter a valid 10-digit number.</small>
+        </div>
+      </div>
+
+      <!-- Status Field -->
+      <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <select id="status" class="form-select" formControlName="status">
+          <option value="" disabled>Select Status</option>
+          <option value="Available">Available</option>
+          <option value="Delivering">Delivering</option>
+        </select>
+        <div *ngIf="agentForm.get('status')?.invalid && agentForm.get('status')?.touched" class="text-danger">
+          <small>Status is required.</small>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <button type="submit" class="btn btn-success me-2" [disabled]="agentForm.invalid">
+        {{ isEditMode ? 'Update' : 'Add' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+    </form>
+  </div>
+</div>

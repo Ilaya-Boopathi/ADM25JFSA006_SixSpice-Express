@@ -1,0 +1,51 @@
+<!-- profile-edit-component.html -->
+<div class="container mt-4">
+  <h2>Edit Profile</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="form-group mb-3">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        formControlName="name"
+        [ngClass]="{ 'is-invalid': editForm.get('name')?.invalid && editForm.get('name')?.touched }"
+      />
+      <div class="invalid-feedback" *ngIf="editForm.get('name')?.errors?.['required']">
+        Name is required.
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="phone">Phone</label>
+      <input
+        type="text"
+        id="phone"
+        class="form-control"
+        formControlName="phone"
+        [ngClass]="{ 'is-invalid': editForm.get('phone')?.invalid && editForm.get('phone')?.touched }"
+      />
+      <div class="invalid-feedback" *ngIf="editForm.get('phone')?.errors?.['required']">
+        Phone number is required.
+      </div>
+      <div class="invalid-feedback" *ngIf="editForm.get('phone')?.errors?.['pattern']">
+        Enter a valid 10-digit phone number.
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="address">Address</label>
+      <textarea
+        id="address"
+        class="form-control"
+        formControlName="address"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <button type="submit" class="btn btn-primary" [disabled]="editForm.invalid">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>

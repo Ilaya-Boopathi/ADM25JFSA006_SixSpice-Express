@@ -1,0 +1,27 @@
+<div class="container my-5">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="fw-bold text-dark">Top Restaurant</h4>
+    <div class="d-flex gap-2">
+      <div class="nav-arrow" (click)="scrollLeft()">&#8592;</div>
+      <div class="nav-arrow" (click)="scrollRight()">&#8594;</div>
+    </div>
+  </div>
+
+  <div class="scroll-container d-flex" #scrollBox>
+    <div class="restaurant-card me-5" *ngFor="let restaurant of restaurants" 
+    (click)="navigatetorestaurantmenu(restaurant.id)">
+      <img [src]="restaurant.overview.image" [alt]="restaurant.overview.restaurantName" class="restaurant-image" />
+      <div class="restaurant-info">
+        <h5 class="restaurant-name">{{ restaurant.overview.restaurantName }}</h5>
+        <!-- <div class="rating-time">
+          <span>⭐ {{ restaurant.rating }}</span>
+          <span>{{ restaurant.deliveryTime }}</span>
+        </div> -->
+        <p class="cuisine">{{ restaurant.overview.cuisine }}</p>
+        <p class="location">{{ restaurant.overview.location }}</p>
+        <!-- <p class="offer" *ngIf="restaurant.offer">{{ restaurant.offer }}</p> -->
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>

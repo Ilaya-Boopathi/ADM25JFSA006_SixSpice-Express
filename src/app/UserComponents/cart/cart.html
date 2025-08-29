@@ -1,0 +1,52 @@
+<div class="cart-container">
+  <!-- Left Side: Cart Items -->
+  <div class="cart-left">
+    <h2>Shopping Cart</h2>
+
+    <div *ngIf="cartItems.length === 0">
+      <p>Your cart is empty.</p>
+    </div>
+
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <div class="item-details">
+        <img [src]="item.image" class="item-image" alt="{{ item.name }}" />
+
+        <div class="item-info">
+          <p><strong>{{ item.name }}</strong> ({{ item.restaurant }})</p>
+
+          <div class="controls-row">
+            <div class="quantity-controls">
+              <button (click)="decreaseQuantity(item)" [disabled]="item.quantity === 1">−</button>
+              <span>{{ item.quantity }}</span>
+              <button (click)="increaseQuantity(item)">+</button>
+            </div>
+
+            <button class="remove-btn bold-icon" (click)="removeItem(item.id)">🗑️</button>
+          </div>
+
+          <p>Price: &#8377;{{ item.price * item.quantity }}</p>
+        </div>
+      </div>
+
+      <hr />
+    </div>
+
+    <div class="cart-actions" *ngIf="cartItems.length > 0">
+      <button class="btn btn-warning rounded-pill px-4" 
+        (click)="emptyCart()" 
+        [disabled]="cartItems.length === 0">
+  Empty Cart
+</button>
+
+    </div>
+  </div>
+
+  <!-- Right Side: Summary -->
+  <div class="cart-right" *ngIf="cartItems.length > 0">
+    <h3>Summary</h3>
+    <p>Total: &#8377;{{ totalPrice }}</p>
+    <p>No of Items: {{ getItemCount() }}</p>
+    <p>Grand Total: &#8377;{{ totalPrice }}</p>
+    <button class=" btn btn-warning rounded-pill px-4" (click)="checkout()">Check Out</button>
+  </div>
+</div>

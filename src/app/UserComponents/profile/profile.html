@@ -1,0 +1,38 @@
+<div class="container py-5">
+  <div class="profile-header d-flex align-items-center gap-3">
+    <img *ngIf="user?.profile?.profilePicture" [src]="user?.profile?.profilePicture" class="profile-avatar" alt="Profile Picture" />
+    <div>
+      <h2 class="mb-1">{{ user?.profile?.name }}</h2>
+      <p class="mb-0">{{ user?.email }}</p>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-12 col-md-6">
+      <div class="profile-card">
+        <div class="profile-field"><span class="profile-label">Phone:</span> {{ user?.profile?.phone }}</div>
+        <div class="profile-field"><span class="profile-label">Address:</span> {{ user?.profile?.address || 'Not Provided' }}</div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 d-flex align-items-start justify-content-md-end mt-3 mt-md-0">
+        <button class="btn btn-outline-primary me-2" (click)="toggleEditMode()">
+          <i class="fa-solid fa-pen-to-square me-2"></i>Edit Profile
+        </button>
+        <button class="btn btn-outline-danger" (click)="logout()">
+          <i class="fa-solid fa-right-from-bracket me-2"></i>Logout
+        </button>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Overlay -->
+<div *ngIf="showEditForm" class="overlay">
+  <div class="modal-content">
+    <app-profile-edit-component
+        [profile]="user?.profile ?? null"
+        [userId]="user?.id ?? ''"
+      (formSubmit)="onFormSubmit($event)"
+      (formCancel)="toggleEditMode()">
+    </app-profile-edit-component>
+  </div>
+</div>
